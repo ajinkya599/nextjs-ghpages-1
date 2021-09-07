@@ -26,7 +26,8 @@ jobs:
 
       - name: substitute variables
         run: |
-          echo "$(date +'%Y')" >> $YEAR
+          year="$(date +'%Y')"
+          echo "$year" >> $YEAR
 
       - name: substitute user inputs in the workflow files
         uses: microsoft/variable-substitution@v1 
