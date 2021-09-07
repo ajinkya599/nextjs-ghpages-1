@@ -27,7 +27,7 @@ jobs:
       - name: substitute variables
         run: |
           year="$(date +'%Y')"
-          echo "$year" >> $YEAR
+          echo "YEAR=$year" >> $GITHUB_ENV
 
       - name: substitute user inputs in the workflow files
         uses: microsoft/variable-substitution@v1 
